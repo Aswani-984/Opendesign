@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Spring Boot Example</title>
+
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, sans-serif;
+		}
+
+		header {
+			background-color: #184C78;
+			color: white;
+			padding: 10px 20px;
+		}
+
+		#main-nav {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		#main-nav .logo {
+			font-size: 1.5em;
+			font-weight: bold;
+		}
+
+		#main-nav .nav-links {
+			display: flex;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		#main-nav .nav-links li {
+			margin: 0 15px;
+		}
+
+		#main-nav .nav-links a {
+			color: white;
+			text-decoration: none;
+			font-size: 1em;
+		}
+
+		#main-nav .nav-links a:hover {
+			text-decoration: underline;
+		}
+
+		.fitems a:hover {
+
+			color: #ffd700;
+			transition: color 0.3s ease;
+		}
+
+		#card1:hover,
+		#card2:hover,
+		#card3:hover {
+			transition: 1s ease-out;
+			transform: scale(1.1);
+		}
+
+		.nav-item {
+			color: white;
+			text-decoration: none;
+			/* Removes default underline */
+			margin: 0 10px;
+			font-size: 16px;
+			transition: color 0.3s ease, border-bottom 0.3s ease;
+			/* Smooth transition */
+		}
+
+		.nav-item:hover {
+			color: #ffd700;
+			/* Changes color on hover */
+			border-bottom: 2px solid #ffd700;
+			/* Adds underline */
+		}
+
+		.nav-item.checked {
+			color: #ffd700;
+			/* Highlighted color */
+			border-bottom: 2px solid #ffd700;
+			/* Underline to indicate selection */
+		}
+	</style>
+
+</head>
+
+<body>
+	<header>
+		<nav id="main-nav">
+			<div class="logo">OPEN DESIGN</div>
+			<ul class="nav-links">
+				<li><a href="#home">Home</a></li>
+				<li><a href="#property">Property</a></li>
+				<li><a href="#service">Service</a></li>
+				<li><a href="#about-us">About Us</a></li>
+				<li><a href="#contact-us">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="container">
+		<img src="image/Rental-Apartment-Page-new-min.jpg" style="width: 100%;height: 400px;padding-top: 10px;">
+
+		<h1 style="display: flex;justify-content: center;color: #372c70;">WHY INVEST IN APARTMENTS?</h1>
+
+
+		<!--1st card-->
+		<div class="col-md-12" style="display: flex;justify-content: center;">
+			<div class="card" id="card1"
+				style="background-color: #184C78;width: 50%;border-radius: 0 100px 100px 0; position: relative;">
+				<div class="card-body" style="color: white; padding: 10px; display: flex; align-items: center;">
+					<!-- Image Section -->
+					<div class="image-section" style="margin-right: 15px;">
+						<img src="image/investment-property-loan-with-bad-credit-min-e1567016634203-scaled.jpg" style="height: 150px; width: 200px; border-radius: 0 65px 65px 0; 
+                      
+                        position: relative; top: -20px; left: 0px;">
+					</div>
+
+					<!-- Text Section -->
+					<div class="text-section">
+						<div class="card-title" style="font-size: x-large; margin-bottom: 5px;">
+							Lorem ipsum dolor sit amet consectetur
+						</div>
+						<div class="card-text" style="font-size: small;">
+							The morning sun filtered through the curtains, casting a golden glow across the room.
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!--1st card-->
+		<br>
+		<br>
+		<!--2nd card-->
+		<div class="col-md-12" style="display: flex; justify-content: center;">
+			<div class="card" id="card2"
+				style="background-color: #184C78; width: 50%; border-radius: 100px 0 0 100px; position: relative;">
+				<div class="card-body" style="color: white; padding: 10px; display: flex; align-items: center;">
+					<!-- Text Section -->
+					<div class="text-section" style="margin-right: 20px;">
+						<div class="card-title" style="font-size: x-large; margin-bottom: 5px;">
+							Lorem ipsum dolor sit amet consectetur
+						</div>
+						<div class="card-text" style="font-size: small;">
+							The morning sun filtered through the curtains, casting a golden glow across the room.
+						</div>
+					</div>
+					<!-- Image Section -->
+					<div class="image-section" style="margin-right: 15px;">
+						<img src="image/buying-apartment-640x427.jpg"
+							style="height: 150px; width: 200px; border-radius: 0 65px 65px 0; position: relative; top: -20px;">
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<br>
+		<br>
+		<!--3rd card-->
+		<div class="col-md-12" style="display: flex;justify-content: center;">
+			<div class="card" id="card3"
+				style="background-color: #184C78;width: 50%;border-radius: 0 100px 100px 0; position: relative;">
+				<div class="card-body" style="color: white; padding: 10px; display: flex; align-items: center;">
+					<!-- Image Section -->
+					<div class="image-section" style="margin-right: 15px;">
+						<img src="image/35274_family-insurance__w660__.jpg" style="height: 150px; width: 200px; border-radius: 0 65px 65px 0; 
+                      
+                        position: relative; top: -20px; left: 0px;">
+					</div>
+
+					<!-- Text Section -->
+					<div class="text-section">
+						<div class="card-title" style="font-size: x-large; margin-bottom: 5px;">
+							Lorem ipsum dolor sit amet consectetur
+						</div>
+						<div class="card-text" style="font-size: small;">
+							The morning sun filtered through the curtains, casting a golden glow across the room.
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!--3rd card-->
+		<br>
+		<!--boomming areas-->
+		<div class="card" style="padding: 10px; margin-top: 30px; background-color: #184C78;">
+			<div class="card-header"
+				style="color: #f3cc0c; display: flex; justify-content: center; font-size: xx-large;font-weight: bold;">
+				BOOMING AREAS
+			</div>
+			<br>
+			<div class="card-text" style="color: #f3cc0c; font-size: medium; display: flex; justify-content: center;">
+				Chennai’s real estate landscape is witnessing a significant transformation as development expands beyond
+				traditional hotspots. The city’s southern and suburban areas,<br> including Pallavaram, East Tambaram,
+				Pozhichalur, Pammal, Anakaputhur, and Kundrathur, are emerging as key growth zones.
+			</div>
+			<br>
+			<nav style="margin-top: 15px; text-align: center;">
+				<a href="#" class="nav-item checked">North Chennai</a>
+				<a href="#" class="nav-item">South Chennai</a>
+				<a href="#" class="nav-item">West Chennai</a>
+				<a href="#" class="nav-item">East Chennai</a>
+			</nav>
+			<br>
+			<div class="content-section" style="display: flex; margin-top: 20px; color: white; gap: 20px;">
+
+				<div class="left-content" style="flex: 1; font-size: medium;margin-left: 50px;">
+					<p>North Chennai originated with the founding of an East India Company factory in the village of
+						Madrasapatnam. The grant was confirmed on 22 August 1639 which is generally <br>considered the
+						date of the
+						city's founding and celebrated as Madras Day and the signatories were Francis Day for the East
+						India
+						Company and Damera Venkata Nayaka, a Padmanyaka Velama ruler for the Vijayanagar Empire. The
+						construction of a small fort was started in 1640 and completed by 1652. <br>This would, by the
+						end of the
+						18th century, with significant alterations and expansions, become the Fort St George that we
+						know
+						today. Prior to the city's founding, fishing hamlets existed in the area.</p>
+					<p>Georgetown remained a fashionable residential area till the early 1900s when congestion and lack
+						of
+						cleanliness compelled people to look for areas further south.<br> It was also Chennai's Central
+						business
+						district till the 1950s when it was supplanted by T. Nagar.</p>
+					<p>
+						North Chennai is a geographic term used to refer to the northern part of Chennai city. Though
+						its definition has varied with time and context, it is generally accepted among historians that
+						North Chennai is used for the part of Chennai city situated north of the Coovum River.
+						Encompassing the Fort St George and
+						Georgetown areas from which the city originated, North Chennai is generally considered an area
+						of stagnant growth, but now it is developing that has already reached saturation as a real
+						estate choice.
+						The area is generally notorious for its thick population, narrow roads, poor
+						infrastructure,and high incidence of crime.This characterization is, however,
+						limited to older neighbourhoods close to the sea coast as new areas to the west, like Kilpauk,
+						Anna Nagar, Avadi and Ambattur have good standards of living and acquired desirability as
+						residential areas.
+					</p>
+				</div>
+
+				<div class="right-content" style="flex: 1; text-align: center;">
+					<img src="image\Webp.net-compress-image-23-2.jpg" alt="North Chennai Image"
+						style="max-width: 100%; border-radius: 5px;height: 300px;">
+				</div>
+			</div>
+		</div>
+		<!--booming areas-->
+
+
+
+		<h1 style="display: flex;justify-content: center;color: #184C78;">KEY AMENITIES</h1>
+		<div class="card-container" style="display: flex; gap: 5rem; justify-content: center; flex-wrap: wrap;">
+			<div class="card" id="card1"
+				style="width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border-radius: 8px; overflow: hidden;height:400px;padding: 10px;">
+				<img class="card-img-top"
+					src="image/desktop-wallpaper-indoor-games-sports-full-high-resolution-indoor-games.jpg"
+					alt="Card image cap" style="height: 300px;object-fit: cover;">
+				<div class="card-body">
+					<p class="card-text">INDOOR GAMES.</p>
+				</div>
+			</div>
+
+			<div class="card" id="card2"
+				style="width:300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border-radius: 8px; overflow: hidden;height:400px;padding: 10px;">
+				<img class="card-img-top" src="image/1245524.jpg" alt="Card image cap"
+					style="height: 300px;object-fit: cover;">
+				<div class="card-body">
+					<p class="card-text">GYMNASIUM.</p>
+				</div>
+			</div>
+
+			<div class="card" id="card3"
+				style="width: 300px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); border-radius: 8px; overflow: hidden;height:400px;padding: 10px;">
+				<img class="card-img-top"
+					src="image/HD-wallpaper-the-golden-room-architecture-dinner-table-hall-golden-banquet-modern-royal-room-castle.jpg"
+					alt="Card image cap" style="height: 300px;object-fit: cover;border-radius: 10px;">
+				<div class="card-body">
+					<p class="card-text">BANQUET HALL.</p>
+				</div>
+			</div>
+		</div>
+
+
+
+
+	</div>
+	<br>
+	<br>
+
+	<footer style="background-color: #184C78; color: white; padding: 20px 0; ">
+		<div style="
+    display: flex; 
+    justify-content: center; 
+    gap: 2rem; 
+    flex-wrap: wrap; 
+    width: 100%;
+    margin: auto; 
+    row-gap: 1.5rem;">
+			<!-- Column 1 -->
+			<div style="min-width: 350px;">
+				<ul style="list-style: none; padding: 0; margin: 0;">
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Company Overview</a>
+					</li>
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Our Business</a>
+					</li>
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Our Leadership</a>
+					</li>
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Csr Policy</a>
+					</li>
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Financials</a>
+					</li>
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Media Center</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Column 2 -->
+			<div style="min-width: 350px;">
+				<ul style="list-style: none; padding: 0; margin: 0;">
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Corporate Social Responsibility</a>
+					</li>
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Dept Funds</a>
+					</li>
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Hybrid Funds</a>
+					</li>
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Others</a>
+					</li>
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Solution Oriented</a>
+					</li>
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Schema Comparison</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Column 3 -->
+			<div style="min-width: 350px;">
+				<ul style="list-style: none; padding: 0; margin: 0;">
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Dividends</a>
+					</li>
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Forms</a>
+					</li>
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Fund Factsheets</a>
+					</li>
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Market Updates</a>
+					</li>
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Total Expense</a>
+					</li>
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Ratio Of Investment</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Column 4 -->
+			<div style="min-width: 350px;">
+				<ul style="list-style: none; padding: 0; margin: 0;">
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Branch Locator</a>
+					</li>
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Request Estatement</a>
+					</li>
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Investor Education</a>
+					</li>
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Addendums</a>
+					</li>
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Way To Transact</a>
+					</li>
+					<li class="fitems" style="margin-bottom: 10px;">
+						<a href="#" style="color: white; text-decoration: none;">Facilitates</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- HR line -->
+		<hr style="border: 1px solid white; max-width: 2000px; margin: 20px auto;">
+	</footer>
+
+
+
+</body>
+
+</html>
